@@ -22,9 +22,6 @@ public class RabbitmqConfiguration {
     @Value("${sr.rabbit.exchange.name}")
     private String exchangeName;
 
-    @Autowired
-    private RabbitTemplate rabbitTemplate;
-
     @Bean
     public Queue queue() {
         return new Queue(queueName);
