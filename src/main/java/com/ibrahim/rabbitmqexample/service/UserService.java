@@ -11,4 +11,6 @@ public interface UserService {
     void saveUser(UserDTO userDTO);
 
     Slice<User> findAll(Pageable pageable);
+
+    void deleteUser(Long userId);
 }

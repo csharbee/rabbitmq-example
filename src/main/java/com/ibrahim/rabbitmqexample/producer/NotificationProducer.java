@@ -38,4 +38,13 @@ public class NotificationProducer {
         System.out.println("Notification Sent Message : " + notification.getMessage());
         rabbitTemplate.convertAndSend(exchangeName, routingName, notification);
     }
+
+
+    public void sendToQueueDeletedUserById() {
+        Notification notification = new Notification();
+        notification.setCreatedDate(new Date());
+        notification.setMessage("Deleted user by id from database");
+        System.out.println("Notification Sent Message : " + notification.getMessage());
+        rabbitTemplate.convertAndSend(exchangeName, routingName, notification);
+    }
 }
